@@ -5,5 +5,5 @@ RUN apk add --no-cache --virtual .phpize-deps autoconf dpkg-dev dpkg file g++ gc
     export CFLAGS="$PHP_CFLAGS" CPPFLAGS="$PHP_CPPFLAGS" LDFLAGS="$PHP_LDFLAGS" && \
     pecl install imagick && \
     docker-php-ext-enable imagick && \
-    docker-php-ext-install pdo pdo_pgsql zip exif && \
+    docker-php-ext-install pgsql pdo pdo_pgsql zip exif && \
     apk del --purge .phpize-deps
