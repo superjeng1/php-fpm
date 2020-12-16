@@ -33,7 +33,7 @@ jobs:
       
       - name: Check Latest docker.io/php:fpm-alpine sha256 checksum
         run: |
-          imageName=$(docker pull docker.io/php:fpm-alpine | sed -n 's/^Digest: /docker.io\\\/php\\@/p')
+          imageName=$(docker pull docker.io/php:7-fpm-alpine | sed -n 's/^Digest: /docker.io\\\/php\\@/p')
           perl -i -pe 's/^(FROM) docker.io\/php@[^ \n]+/\1 '"$imageName"'/gm' Dockerfile
           git add -u
           git diff-index --quiet HEAD && echo "No update available for now. Exiting..." || { git commit -S -m "Updated php image"; }
