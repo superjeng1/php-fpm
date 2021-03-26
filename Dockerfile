@@ -1,4 +1,4 @@
-FROM docker.io/php@sha256:c03104dd73e55f72e35456a2f93cf054ad35dcd31a11d87d4e43098aaa397dab
+FROM docker.io/php@sha256:360ccd4e4be1b33c618a9a480b2685e1cacd6c478dc8621845fadcca56fbc534
 # The above is checksum of docker.io/alpine:latest and will be automatically updated by GitHub actions
 
 RUN apk add --no-cache --virtual .phpize-deps autoconf dpkg-dev dpkg file g++ gcc libc-dev make pkgconf re2c imagemagick-dev libtool && \
