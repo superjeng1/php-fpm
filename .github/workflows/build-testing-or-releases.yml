@@ -56,4 +56,4 @@ jobs:
 
           docker tag $IMAGE_NAME:$VERSION $IMAGE_ID:$VERSION
           [ "$VERSION" != "testing" ] && { docker tag $IMAGE_NAME:$VERSION $IMAGE_ID:latest; }
-          docker push $IMAGE_ID
+          docker push $IMAGE_ID:$VERSION
